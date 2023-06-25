@@ -27,6 +27,11 @@
     height: auto;
   }
 
+@font-face {
+    font-family: Dosis;
+    src: url('fonts/Dosis-VariableFont_wght.ttf');
+}
+
 body {
     height: 100%;
     display: grid;
@@ -39,19 +44,31 @@ body {
 
 .actions {
     display: flex;
-    gap: 35px;
+    gap: 50px;
     align-items: center;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     height: 100px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .actions button {
+    font-family: Dosis;
+    font-size: 1.1rem;
+    color: white;
     width: 100px;
     height: 40px;
     border-radius: 24px;
+    background-color: var(--main-color);
     border: none;
+    box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+
 }
 
 .search, .profile {
@@ -71,6 +88,10 @@ body {
     height: 80px;
  }
 
+.profile p {
+    font-size: 1.5rem;
+}
+
 .welcome #welcome-logo{
     grid-area: avatar;
 }
@@ -84,6 +105,7 @@ body {
 }
 
 header {
+    font-family: Dosis;
     background-color: var(--accent-color-3);
     grid-area: header;
     display: grid;
@@ -91,16 +113,49 @@ header {
     grid-template-rows: 1fr 1fr;
     padding: 5px 65px 20px 65px;
     max-height: 200px;
+    border-bottom: 1px solid grey;
 }
 
 main {
-    background-color: blue;
+    background-color: #f4ebe8;
     grid-area: main;
 }
 
 aside {
-    background-color: orange;
+    font-family: Dosis;
+    background-color: var(--main-color);
     grid-area: aside;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 30px;
+}
+
+
+.asidemain, .settings, .asideheader {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 25px;
+}
+
+.asideheader svg {
+    width: 60px;
+    height: 60px;
+    box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
+.asideheader {
+    background-color: var(--accent-color-1);
+    font-size: 2rem;
 }
 
 .welcome {
@@ -140,8 +195,13 @@ aside {
     background-color: rgba(255, 255, 255, 0.805);
 }
 
-svg {
+.search svg, .profile svg {
     height: 35%;
 }
 
-
+aside svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+    justify-self: end;
+}
