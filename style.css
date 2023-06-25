@@ -39,6 +39,7 @@ body {
     align-items: center;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    height: 80px;
 }
 
 .actions button {
@@ -53,7 +54,17 @@ body {
     grid-row: 1 / 2;
     height: 80px;
     align-items: center;
+    gap: 20px;
 }
+
+.profile {
+    justify-content: center;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+ }
 
 .welcome #welcome-logo{
     grid-area: avatar;
@@ -74,6 +85,7 @@ header {
     grid-template-columns: 70% 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 5px 65px 20px 65px;
+    max-height: 200px;
 }
 
 main {
@@ -87,23 +99,40 @@ aside {
 }
 
 .welcome {
+    height: 80px;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 3fr 6fr;
+    grid-template-rows: 1fr 1 fr;
+    grid-template-columns: .5fr 6fr;
     grid-template-areas:
     "avatar greeting"
     "avatar name ";
+    align-content: center;
+}
 
+#welcome-logo {
+    width: 80px;
+    height: 80px;
+}
+
+#Hi {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#Name {
+    align-self: top;
 }
 
 .search input {
     height: 25%;
-    width: 100%;
+    width: 75%;
 }
+
 svg {
-    height: 25%;
+    height: 30%;
 }
 
 
