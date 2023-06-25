@@ -26,16 +26,54 @@
 body {
     height: 100%;
     display: grid;
-    grid-template-rows: 2fr 5fr;
-    grid-template-columns: 2fr 7fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1.5fr 7fr;
     grid-template-areas:
     "aside header"
     "aside main";
 }
 
+.actions {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.actions button {
+    width: 88px;
+    height: 40px;
+    border-radius: 24px;
+    border: none;
+}
+
+.search, .profile {
+    display: flex;
+    grid-row: 1 / 2;
+    height: 80px;
+    align-items: center;
+}
+
+.welcome #welcome-logo{
+    grid-area: avatar;
+}
+
+.welcome #Hi{
+    grid-area: greeting;
+}
+
+.welcome #Name{
+    grid-area: name;
+}
+
 header {
     background-color: red;
     grid-area: header;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px 65px 20px 65px;
 }
 
 main {
@@ -47,3 +85,25 @@ aside {
     background-color: orange;
     grid-area: aside;
 }
+
+.welcome {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 3fr 6fr;
+    grid-template-areas:
+    "avatar greeting"
+    "avatar name ";
+
+}
+
+.search input {
+    height: 25%;
+    width: 100%;
+}
+svg {
+    height: 25%;
+}
+
+
